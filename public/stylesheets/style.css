@@ -79,3 +79,12 @@ li a:hover {
 .painting{
   margin: 20px 20px 20px 20px;
 }
+
+.banner{
+  text-align: center;
+}
+
+.piece{
+  
+  margin: 20px 200px 200px 30%;
+}

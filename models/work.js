@@ -5,7 +5,7 @@ const workSchema = new Schema({
     title: String, 
     artist: { type: Schema.Types.ObjectId, ref: 'Artist'},
     description: String,
-    bids:[{bid: Number, buyer:{name: String}}], 
+    bids: Number,//[{bid: Number, buyer:{name: String}}], 
     buyer: String,
     //[{amount: Number, 
     //        buyer: { type: Schema.Types.ObjectId, ref: 'Buyer'}}],

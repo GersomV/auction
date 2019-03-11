@@ -64,9 +64,10 @@ router.get("/buyerloggedin", (req, res) => {
   
   router.post('/singlework', (req, res) => {
     const Works = Work
-    const bid = req.body;
+    const bids = req.body.bid;
     const buyer = req.session.currentUser.name
-    Works.updateOne({ _id: req.query.work_id }, { $push:{bids: bid, buyer}})
+    //if (bid >)
+    Works.updateOne({ _id: req.query.work_id },{ $max: { bids: bids },buyer })//, {bids, buyer}){ $push:{bids: bid, buyer}})
     .then(work => {
     res.redirect('/singlework/' + req.query.work_id)
   //   res.redirect('/buyerloggedin')
